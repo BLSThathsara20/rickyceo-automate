@@ -75,7 +75,7 @@ def synthesize_edge(text: str, out_wav: Path, cfg: dict[str, Any]) -> Path:
 
 
 def synthesize_speech(text: str, out_wav: Path, cfg: dict[str, Any] | None = None) -> Path:
-    """Synthesize narration. Prefers Piper when available; else free edge-tts."""
+    """Synthesize narration. Prefers Piper when available; else edge-tts."""
     cfg = cfg or load_config()
     engine = str((cfg.get("tts") or {}).get("engine") or "auto").lower()
     text = " ".join(text.split())
@@ -87,7 +87,7 @@ def synthesize_speech(text: str, out_wav: Path, cfg: dict[str, Any] | None = Non
         return synthesize_piper(text, out_wav, cfg)
 
     if engine in ("edge", "edge-tts", "auto"):
-        print("[tts] Using edge-tts (free; Piper not configured)")
+        print("[tts] Using edge-tts (Piper not configured)")
         return synthesize_edge(text, out_wav, cfg)
 
     raise RuntimeError(

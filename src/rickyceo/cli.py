@@ -12,7 +12,7 @@ from .script_gen import ollama_available
 def build_parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(
         prog="rickyceo",
-        description="Local $0 stick-figure Shorts pipeline for @RickyCEO",
+        description="Local stick-figure Shorts pipeline for @RickyCEO",
     )
     sub = p.add_subparsers(dest="command", required=True)
 

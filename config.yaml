@@ -33,7 +33,7 @@ ollama:
   temperature: 0.9
 
 tts:
-  # Prefer piper if binary + voice model exist; otherwise edge-tts (free)
+  # Prefer piper if binary + voice model exist; otherwise edge-tts
   engine: auto
   piper_binary: piper
   piper_voice: assets/voices/en_US-lessac-medium.onnx

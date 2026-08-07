@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "rickyceo"
 version = "0.1.0"
-description = "Local $0 pipeline: funny stick-figure Shorts → YouTube for @RickyCEO"
+description = "Local automation for @RickyCEO — funny stick-figure YouTube Shorts (script → voice → animation → upload)"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [

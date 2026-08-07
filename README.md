@@ -1,10 +1,10 @@
-# RickyCEO — local $0 YouTube Shorts pipeline
+# RickyCEO — YouTube Shorts automation
 
 Fully automatic **local** pipeline for [@RickyCEO](https://www.youtube.com/@RickyCEO):
 
 **idea → funny script (Ollama) → voice (Piper or edge-tts) → stick-figure Short → YouTube upload**
 
-No paid APIs. Runs on your Mac.
+Runs on your Mac with local tools and the official YouTube Data API.
 
 ## Requirements
 
@@ -24,7 +24,7 @@ pip install -e .
 # Optional but recommended for better scripts
 ollama pull llama3.2
 
-# YouTube upload (free API quota)
+# YouTube upload
 # 1. Google Cloud Console → enable YouTube Data API v3
 # 2. Create OAuth client (Desktop app)
 # 3. Download JSON → credentials/client_secret.json
@@ -71,7 +71,7 @@ Outputs land in `output/<timestamp>-<slug>/`:
 ## TTS notes
 
 - **Piper** (fully offline): install the `piper` binary and put an ONNX voice in `assets/voices/` (see `assets/voices/README.md`).
-- If Piper is missing, the pipeline uses **edge-tts** (free Microsoft voices; needs network, no API key).
+- If Piper is missing, the pipeline uses **edge-tts** (Microsoft voices; needs network, no API key).
 
 ## Daily automation (optional)
 
@@ -86,8 +86,8 @@ Review privately, then re-upload or change privacy in YouTube Studio until you t
 
 ## Limits
 
-- YouTube free API quota ≈ **6 uploads/day** (request more quota if needed — still free).
-- Stick figures are code-drawn on purpose (brandable, $0, no GPU).
+- YouTube API default quota ≈ **6 uploads/day** (you can request a higher quota if needed).
+- Stick figures are code-drawn on purpose (brandable, no GPU required).
 - Do not spam; low-quality floods can hurt the channel.
 
 ## Project layout
