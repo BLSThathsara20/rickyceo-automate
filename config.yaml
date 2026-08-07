@@ -1,0 +1,53 @@
+channel:
+  name: RickyCEO
+  handle: "@RickyCEO"
+  default_privacy: private
+  category_id: "23"  # Comedy
+  made_for_kids: false
+  default_tags:
+    - Shorts
+    - funny
+    - stickman
+    - CEO
+    - comedy
+    - RickyCEO
+
+video:
+  width: 1080
+  height: 1920
+  fps: 12
+  target_seconds: 45
+  background: "#FFF8E7"
+  caption_color: "#111111"
+  caption_outline: "#FFFFFF"
+
+character:
+  name: Ricky
+  stroke: "#111111"
+  accent: "#E85D04"
+  line_width: 6
+
+ollama:
+  host: http://127.0.0.1:11434
+  model: llama3.2
+  temperature: 0.9
+
+tts:
+  # Prefer piper if binary + voice model exist; otherwise edge-tts (free)
+  engine: auto
+  piper_binary: piper
+  piper_voice: assets/voices/en_US-lessac-medium.onnx
+  edge_voice: en-US-GuyNeural
+  speaking_rate: 1.05
+
+ideas:
+  - CEO discovers Excel for the first time
+  - Board meeting but nobody knows what a KPI is
+  - Ricky tries to reply-all the entire company
+  - Coffee machine becomes the new CTO
+  - Ricky schedules a meeting about scheduling meetings
+  - Password is Password123 and somehow it works
+  - Ricky outsources his job to a rubber duck
+  - Standup meeting lasting 3 hours
+  - Ricky invents AI that only says synergy
+  - The printer wins an argument with the CEO

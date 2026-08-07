@@ -1,0 +1,27 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Generated media & secrets
+output/
+credentials/*
+!credentials/README.md
+*.mp4
+*.wav
+*.png
+!assets/**/*.png
+
+# Piper models (large)
+assets/voices/*.onnx
+assets/voices/*.onnx.json
+assets/voices/*.tar.gz
+
+.DS_Store

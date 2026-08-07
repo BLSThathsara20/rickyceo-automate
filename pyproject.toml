@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rickyceo"
+version = "0.1.0"
+description = "Local $0 pipeline: funny stick-figure Shorts → YouTube for @RickyCEO"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "Pillow>=10.0.0",
+  "PyYAML>=6.0",
+  "requests>=2.31.0",
+  "google-api-python-client>=2.100.0",
+  "google-auth-oauthlib>=1.1.0",
+  "google-auth-httplib2>=0.2.0",
+  "edge-tts>=6.1.0",
+  "piper-tts>=1.2.0",
+  "numpy>=1.26.0",
+]
+
+[project.scripts]
+rickyceo = "rickyceo.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
